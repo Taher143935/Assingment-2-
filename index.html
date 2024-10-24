@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            /* Dark background for the body */
+        }
+
+        .join-us {
+            background-color: #2d2d2d;
+            /* Dark grey background for the card section */
+            border-radius: 20px;
+            padding: 40px;
+            color: white;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+
+        .btn-danger {
+            background-color: #E74C3C;
+            border: none;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .rounded-lg {
+            border-radius: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .footer .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #E74C3C;
+            /* Red color for Fitness logo */
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        .footer h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .footer ul {
+            padding-left: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer ul li a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer ul li a:hover {
+            color: #fff;
+        }
+
+        .text-muted {
+            color: #888 !important;
+        }
+
+        .text-white {
+            color: #fff !important;
+        }
+
+        .text-center p {
+            border-top: 1px solid #444;
+            padding-top: 15px;
+            margin-top: 20px;
+            color: #888;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #aaa;
+        }
+
+        .exercise-card {
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            color: white;
+        }
+
+        .exercise-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Add overlay */
+        }
+
+        .exercise-card .overlay-text {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+
+        .exercise-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bmi-section {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ff4c4c;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            background-image: url('fitness-background.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            background-color: #ff4c4c;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .hero .stats {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: right;
+        }
+
+        .hero .stats p {
+            margin: 0;
+            font-size: 16px;
+            text-align: right;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature h4 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .feature p {
+            color: #aaa;
+        }
+
+        body {
+            background-color: #1e1e1e;
+            color: #fff;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .bmi-chart,
+        .bmi-calculator {
+            background-color: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .bmi-chart table {
+            width: 100%;
+            color: white;
+        }
+
+        .bmi-chart table th,
+        .bmi-chart table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #444;
+        }
+
+        .bmi-calculator form {
+            max-width: 100%;
+        }
+
+        .bmi-calculator .form-control {
+            background-color: #444;
+            color: white;
+            border: none;
+        }
+
+        .bmi-calculator button {
+            background-color: #ff5733;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+
+        .bmi-calculator button:hover {
+            background-color: #ff7043;
+        }
+
+        .section-subtitle {
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+
+        body {
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        p {
+            color: #bbb;
+        }
+
+        .card {
+            background-color: #333;
+            border: none;
+        }
+
+        .card-img-top {
+            border-radius: 10px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #fff;
+        }
+
+        .card-text {
+            color: #ccc;
+        }
+
+        .team-section {
+            background-color: #000;
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Fitness</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Get body in shape & stay healthy</h1>
+        <p>A huge selection of health and fitness content, healthy recipes and transformation stories to help you get
+            fit and stay fit!</p>
+        <div class="btn-group">
+            <a href="#" class="btn">Join Club Now!</a>
+            <a href="#" class="btn">Download App</a>
+        </div>
+        <div class="stats">
+            <p>500+ Free Workout Videos</p>
+            <p>350+ Video tutorial</p>
+        </div>
+    </div>
+    
+    <!-- Section Header -->
+    <div class="container text-center my-5">
+        <h1 class="section-title">Change Your Habits</h1>
+        <p class="subtitle">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+            access to a gym.</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container">
+        <div class="row text-center">
+            <!-- Movement -->
+            <div class="col-md-3 feature">
+                <img src="images/image 3.png" alt="Movement" class="circle-image">
+                <h4>Movement</h4>
+                <p>We believe fitness should be accessible to everyone</p>
+            </div>
+
+            <!-- Time -->
+            <div class="col-md-3 feature">
+                <img src="images/image 2.png" alt="Time" class="circle-image">
+                <h4>Time</h4>
+                <p>We believe fitness should be accessible to everyone</p>
+            </div>
+
+            <!-- Practice -->
+            <div class="col-md-3 feature">
+                <img src="images/image 4.png" alt="Practice" class="circle-image">
+                <h4>Practice</h4>
+                <p>We believe fitness should be accessible to everyone</p>
+            </div>
+
+            <!-- Weight Loss -->
+            <div class="col-md-3 feature">
+                <img src="images/image 5.png" alt="Weight Loss" class="circle-image">
+                <h4>Weight Loss</h4>
+                <p>We believe fitness should be accessible to everyone</p>
+            </div>
+        </div>
+    </div>
+
+     <!-- Join Us Section -->
+     <section class="join-us py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Section -->
+                <div class="col-md-6">
+                    <h1 class="display-4 font-weight-bold text-white">Run an Extra Mile Easily</h1>
+                    <p class="lead text-muted">We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With hundreds of professional workouts.</p>
+                    <a href="#" class="btn btn-danger btn-lg rounded-pill">Join Now</a>
+                </div>
+                <!-- Image Section -->
+                <div class="col-md-6 text-center">
+                    <img src="images/run.jpg" alt="Man Running" class="img-fluid rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trainings and Exercises Section -->
+    <div class="container my-5">
+        <h1 class="section-title">Trainings and Exercises</h1>
+        <p class="subtitle">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+            access to a gym.</p>
+
+        <div class="row">
+            <!-- First Row -->
+            <div class="col-md-4">
+                <div class="exercise-card"
+                    style="background-image: url('images/exercise1.jpg');">
+                    <div class="overlay-text">Lorem Ipsum</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="exercise-card"
+                    style="background-image: url('images/exercise2.png');">
+                    <div class="overlay-text">Lorem Ipsum</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="exercise-card"
+                    style="background-image: url('images/exercise3.png');">
+                    <div class="overlay-text">Leg Press: Works the quadriceps and glutes</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <!-- Second Row -->
+            <div class="col-md-4">
+                <div class="exercise-card"
+                    style="background-image: url('images/exercise4.png');">
+                    <div class="overlay-text">Leg Press: Works the quadriceps and glutes</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="exercise-card"
+                    style="background-image: url(images/exercise5.jpg);">
+                    <div class="overlay-text">Leg Press: Works the quadriceps and glutes</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="exercise-card"
+                    style="background-image: url('images/exercise6.jpg');">
+                    <div class="overlay-text">Leg Press: Works the quadriceps and glutes</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BMI Calculator Section -->
+    <div class="container bmi-section">
+        <h1 class="section-title">BMI Calculator</h1>
+        <p class="subtitle">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+            access to a gym.</p>
+    </div>
+    <div class="container my-5">
+        <div class="section-title">BMI Calculator Chart</div>
+
+        <div class="row">
+            <!-- BMI Chart -->
+            <div class="col-md-6">
+                <div class="bmi-chart">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- BMI Calculator Form -->
+            <div class="col-md-6">
+                <div class="bmi-calculator">
+                    <h2>Calculate your BMI</h2>
+                    <p class="section-subtitle">
+                        We believe fitness should be accessible to everyone, everywhere, regardless of income or access
+                        to a gym.
+                    </p>
+                    <form>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="Height/cm" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="Weight/kg" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" class="form-control" placeholder="Age" required>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control">
+                                <option value="" disabled selected>Sex</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control">
+                                <option value="" disabled selected>Select an activity factor</option>
+                                <option value="sedentary">Sedentary</option>
+                                <option value="active">Active</option>
+                                <option value="very-active">Very Active</option>
+                            </select>
+                        </div>
+                        <button type="submit">Calculate</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="team-section text-center py-5">
+        <div class="container">
+            <h1 class="mb-4">Meet Our Team</h1>
+            <p class="mb-5">We believe fitness should be accessible to everyone, everywhere, regardless of income or
+                access to a gym.</p>
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/trainer1.png" alt="Jerome Bell" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Jerome Bell</h5>
+                            <p class="card-text">Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/trainer2.png" alt="Cameron Williamson" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Cameron Williamson</h5>
+                            <p class="card-text">Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/trainer3.png" alt="Darrell Steward" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Darrell Steward</h5>
+                            <p class="card-text">Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/trainer4.png" alt="Dianne Russell" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Dianne Russell</h5>
+                            <p class="card-text">Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/trainer5.png" alt="Cody Fisher" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Cody Fisher</h5>
+                            <p class="card-text">Trainer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/trainer6.png" alt="Theresa Webb" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Theresa Webb</h5>
+                            <p class="card-text">Trainer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-md-4">
+                    <h2 class="logo mb-3">Fitness</h2>
+                    <p class="text-muted">We believe fitness should be accessible to everyone, everywhere, regardless of
+                        income or access to a gym. With hundreds of professional workouts.</p>
+                </div>
+                <!-- Right Column 1 -->
+                <div class="col-md-4">
+                    <h4 class="text-white mb-3">Get Started</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">Service</a></li>
+                        <li><a href="#" class="text-muted">Contact Us</a></li>
+                        <li><a href="#" class="text-muted">Affiliate Program</a></li>
+                        <li><a href="#" class="text-muted">About Us</a></li>
+                    </ul>
+                </div>
+                <!-- Right Column 2 -->
+                <div class="col-md-4">
+                    <h4 class="text-white mb-3">Get Started</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted">Fitness</a></li>
+                        <li><a href="#" class="text-muted">Platform</a></li>
+                        <li><a href="#" class="text-muted">Workout Library</a></li>
+                        <li><a href="#" class="text-muted">App Design</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="text-muted">All rights reserved @Fitness 2024</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
